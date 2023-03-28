@@ -21,6 +21,25 @@ const router = createRouter({
       path: '/todos',
       name: 'todo',
       component: () => import('../views/TodoView.vue')
+    },
+    {
+      path: '/products',
+      name: 'Product',
+      component: import('../pages/SearchCompositionAPI.vue')
+      // component: () => import('../pages/AllProducts.vue')
+    },
+    {
+      path: '/products/:pid',
+      name: 'Product detail',
+      component: () => import('../pages/ProductDetails.vue'),
+      // component: () => import('../pages/ProductDetails.vue'),
+      props: true
+    },
+    {
+      path: '/products/add',
+      name: 'Add product',
+      component: () => import('../pages/AddProduct.vue')
+      // component: () => import('../pages/AddProduct.vue')
     }
   ]
 })
